@@ -40,14 +40,20 @@ Known Issues:
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
-		alert(allergy_count);
+		    alert("allergy_count is " + allergy_count + "\ncold_count is " + cold_count);
         }
 
         function coldAdd(){
             cold_count = cold_count + 1;
+            alert("allergy_count is " + allergy_count + "\ncold_count is " + cold_count);
         }
 
-  </script>
+        function changeText(){
+            var initialText = document.getElementById("results"); 
+            initialText.innerHTML = "Probability it is allergies = " + allergy_count + "% <br> Probability it is a cold = " + cold_count + "%"
+        }
+
+</script>
 
 
 
@@ -88,26 +94,78 @@ Known Issues:
 </div>
 	
 <div class="page" id="one">
-	<div id="header" class="w3-container w3-flat-carrot">
+	<div id="header" class="w3-container w3-flat-nephritis">
 		<h1>Question 1</h1>
 	</div>
 	
     	<div id="content" class="w3-container">
         <p>Are your eyes watery or itchy?</p>    
     	</div>
-</div>
+        <a href="#two" onclick="allergyAdd()" class="w3-btn w3-grey w3-round">Yes</a>
+        <a href="#two" onclick="coldAdd()" class="w3-btn w3-grey w3-round">No</a>    
+    </div>
+<footer class="w3-bottom w3-container w3-flat-wisteria">
+	<p>DIY!</p>
+</footer>
 
 <div class="page" id="two">
-	<div class="w3-container w3-flat-carrot">
+	<div class="w3-container w3-flat-nephritis">
 		<h1>Question 2</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Content of page 2 goes here.</p>
+		<p>Do you have a sore throat?</p>
 	</div>
-</div>	
+    <a href="#three" onclick="coldAdd()" class="w3-btn w3-grey w3-round">Yes</a>
+    <a href="#three" onclick="allergyAdd()" class="w3-btn w3-grey w3-round">No</a> 
+    </div>	
+<footer class="w3-bottom w3-container w3-flat-wisteria">
+	<p>DIY!</p>
+</footer>
 
-<footer class="w3-bottom w3-container w3-flat-carrot">
+    <div class="page" id="three">
+	<div class="w3-container w3-flat-nephritis">
+		<h1>Question 3</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Do you have a fever?</p>
+	</div>
+    <a href="#four" onclick="coldAdd()" class="w3-btn w3-grey w3-round">Yes</a>
+    <a href="#four" onclick="allergyAdd()" class="w3-btn w3-grey w3-round">No</a> 
+
+<footer class="w3-bottom w3-container w3-flat-wisteria">
+	<p>DIY!</p>
+</footer>
+
+  <div class="page" id="four">
+	<div class="w3-container w3-flat-nephritis">
+		<h1>Question 4</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Are your symptoms seasonal versus chronic?</p>
+	</div>
+    <a href="#five" onclick="allergyAdd()" class="w3-btn w3-grey w3-round">Seasonal</a>
+    <a href="#five" onclick="coldAdd()" class="w3-btn w3-grey w3-round">Chronic</a> 
+
+<footer class="w3-bottom w3-container w3-flat-wisteria">
+	<p>DIY!</p>
+</footer>
+
+ <div class="page" id="five">
+	<div class="w3-container w3-flat-nephritis">
+		<h1>Results!</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p id="results">Press the button below to see your results!</p>
+	</div>
+    <a onclick="changeText()" class="w3-btn w3-grey w3-round">My Results!</a>
+     <a href="#one" class="w3-btn w3-grey w3-round">Back To Start</a> 
+    
+
+<footer class="w3-bottom w3-container w3-flat-wisteria">
 	<p>DIY!</p>
 </footer>
 
